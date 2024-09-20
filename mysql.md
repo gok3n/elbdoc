@@ -9,7 +9,7 @@ binlog_do_db = example_db
 mkdir /var/log/mysql
 ```
 ```
-sudo chown -R mysql:mysql /var/log/mysql
+chown -R mysql:mysql /var/log/mysql
 ```
 2. 配置从服务器mysql配置,[mysqld]项加入
 ```
