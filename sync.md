@@ -17,7 +17,7 @@ ssh-copy-id username@slaveIP
 ```sh
 #!/bin/bash
 
-# 定义源目录和目的地服务器的目录
+# 定义目录
 SOURCE_DIR="path"
 DESTINATION="username@slaveIP:path"
 LOG_FILE="/path/sync.log"
@@ -32,4 +32,18 @@ done
 4. 启动同步
 ```sh
 nohup ./sync.sh >/dev/null 2>&1 &
+```
+5. 日志切片
+```sh
+vim /etc/logrotate.d/sync
+```
+**配置**
+```sh
+/path/to/sync.log {
+    size 20M
+    rotate 20
+    compress
+    missingok
+    notifempty
+}
 ```
