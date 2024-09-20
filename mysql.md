@@ -1,6 +1,5 @@
 # 主从配置
-1. 配置主服务mysql配置文件
-[mysqld]
+1. 配置主服务mysql配置文件,[mysqld]项加入
 ```
 log_bin = /var/log/mysql/mysql-bin.log
 binlog_do_db = example_db
