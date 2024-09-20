@@ -17,6 +17,7 @@ log_error = /var/log/mysql/error.log
 relay_log = /var/log/mysql/mysql-relay-bin.log
 log_bin = /var/log/mysql/mysql-bin.log
 replicate_do_db = example_db
+read_only = on
 ```
 `server-id = * （主从唯一）`
 
