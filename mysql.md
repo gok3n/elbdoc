@@ -4,3 +4,4 @@
 log_bin = /var/log/mysql/mysql-bin.log
 binlog_do_db = example_db
 ```
+**创建log文件**
