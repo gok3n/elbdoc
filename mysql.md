@@ -66,7 +66,7 @@ START SLAVE;
 ```
 SHOW SLAVE STATUS\G
 ```
-`成功状态`
+成功状态
 `Slave_IO_Running  Yes`
 `Slave_SQL_Running  Yes`
 解锁主库
