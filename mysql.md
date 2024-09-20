@@ -4,7 +4,7 @@
 log_bin = /var/log/mysql/mysql-bin.log
 binlog_do_db = example_db
 ```
-`创建log文件`
+`创建目录赋予权限`
 ```
 mkdir /var/log/mysql
 ```
@@ -19,5 +19,22 @@ log_bin = /var/log/mysql/mysql-bin.log
 replicate_do_db = example_db
 read_only = on
 ```
+`创建目录赋予权限`
+```
+mkdir /var/log/mysql
+```
+```
+chown -R mysql:mysql /var/log/mysql
+```
 `server-id = * （主从唯一）`
 
+3. 创建复制用户
+```
+CREATE USER 'slave'@'%' IDENTIFIED BY 'pwd';
+```
+```
+GRANT REPLICATION SLAVE ON *.* TO 'slave'@'%';
+```
+```
+FLUSH PRIVILEGES;
+```
